@@ -9,7 +9,5 @@
   :depends-on (:cffi :cffi-toolchain)
   :serial t
   :components ((:file "package")
-			   (:cffi-grovel-file "zfs-types"
-				:cc-flags (#.(uiop:run-program '("pkg-config" "--cflags" "libzfs_core")
-											   :output '(:string :stripped t))))
+			   (:cffi-grovel-file "zfs-types")
                (:file "cl-zfs")))
