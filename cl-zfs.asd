@@ -10,4 +10,5 @@
   :serial t
   :components ((:file "package")
 			   (:cffi-grovel-file "zfs-types")
+			   (:file "zfs-funs")
                (:file "cl-zfs")))
