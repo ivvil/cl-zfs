@@ -11,4 +11,9 @@
   :components ((:file "package")
 			   (:cffi-grovel-file "zfs-types")
 			   (:file "zfs-funs")
+			   (:module "nvlist"
+				:serial t
+				:components ((:file "package")
+							 (:file "c")
+							 (:file "nvlist")))
                (:file "cl-zfs")))

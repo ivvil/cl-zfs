@@ -57,14 +57,6 @@
   (push (zfs-get-name handle) +dataset-names+)
   0)
 
-(defcfun "nvlist_alloc" :int
-  (slot :pointer)
-  (flags :int)
-  (alloc :int))
-
-(defcfun "nvlist_add_string" :int
-  (nvlit :pointer))
-
 (defcfun "lzc_create" :int
   (fsname :string)
   (type lzc-dataset-type)

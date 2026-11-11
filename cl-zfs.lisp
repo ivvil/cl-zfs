@@ -40,3 +40,5 @@
 										  (cffi:null-pointer))
 				  (setf names (nreverse +dataset-names+))))
 		   (c:zfs-close root)))))
+
+(defun create-dataset (path &key (type :file)))
