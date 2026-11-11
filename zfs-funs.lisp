@@ -49,12 +49,27 @@
 (defcfun "zpool_close" :void
   (handle zpool-handle))
 
-;;; HACK Uses *dataset-names* to push values
+;;; HACK Uses +dataset-names+ to push values
 (defcallback collect-name :int
 	((handle zfs-handle)
 	 (data :pointer))
   (declare (ignore data))
   (push (zfs-get-name handle) +dataset-names+)
   0)
+
+(defcfun "nvlist_alloc" :int
+  (slot :pointer)
+  (flags :int)
+  (alloc :int))
+
+(defcfun "nvlist_add_string" :int
+  (nvlit :pointer))
+
+(defcfun "lzc_create" :int
+  (fsname :string)
+  (type lzc-dataset-type)
+  (props :pointer)
+  (wkeydata (:pointer :uint8))
+  (wkeylen :uint))
 
 

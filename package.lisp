@@ -1,9 +1,5 @@
 ;;;; package.lisp
 
-(defpackage #:cl-zfs
-  (:use #:cl)
-  (:local-nicknames (:c :cl-zfs/c-lib)))
-
 (defpackage #:cl-zfs/c-lib
   (:use #:cl #:cffi)
   (:export :zfs-type
@@ -26,3 +22,7 @@
 		   :zpool-close
 
 		   :collect-name))
+
+(defpackage #:cl-zfs
+  (:use #:cl)
+  (:local-nicknames (:c :cl-zfs/c-lib)))

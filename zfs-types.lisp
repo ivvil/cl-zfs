@@ -14,6 +14,6 @@
 	   ((:bookmark		"ZFS_TYPE_BOOKMARK"))
 	   ((:vdev			"ZFS_TYPE_VDEV")))
 
-
-
-
+(cenum lzc-dataset-type
+	   ((:zfs "LZC_DATSET_TYPE_ZFS"))
+	   ((:zvol "LZC_DATSET_TYPE_ZVOL")))

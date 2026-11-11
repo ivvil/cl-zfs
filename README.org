@@ -1,1 +1,5 @@
 #+title: cl-zfs
+* Tasks
+** TODO Separate ~libzfs~ and ~libzfs_core~ operations
+
+The "stable" api is ~libzfs_core~, stuff using ~libzfs~ directly is somewhat fragile
