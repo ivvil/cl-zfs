@@ -1,4 +1,4 @@
-(in-package #:cl-zfs/nvlist)
+(in-package #:cl-zfs.nvlist/c-lib)
 
 (defctype nvlist-handle :pointer)
 

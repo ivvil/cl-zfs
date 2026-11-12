@@ -9,6 +9,10 @@
   :depends-on (:cffi :cffi-toolchain)
   :serial t
   :components ((:file "package")
+			   (:module "c"
+				:serial t
+				:components ((:file "package")
+							 (:file "integer")))
 			   (:cffi-grovel-file "zfs-types")
 			   (:file "zfs-funs")
 			   (:module "nvlist"

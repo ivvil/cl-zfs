@@ -1,5 +1,5 @@
 
-(in-package #:cl-zfs/nvlist)
+(in-package #:cl-zfs.nvlist)
 
 (defun nvlist-add-number (nvlist key number &optional (type :uint64))
   (ecase type
